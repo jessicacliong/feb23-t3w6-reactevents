@@ -10,11 +10,22 @@ import React from "react";
  		}
  	}
 
+   async componentDidMount() {
+    let randomPokemonNumber = Math.floor(Math.random() * 1010) + 1;
+    let apiResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${randomPokemonNumber}`);
+    let apiData = await apiResponse.json();
+
+    this.setState({pokemonData: apiData});
+  }
+
+
  	render(){
  		if (this.state.pokemonData.name){
  			return(
  				<div>
  					<h1>Pokemon data found!</h1>
+          <h1>{this.state.pokemonData.name}</h1>
+ 					<img src={this.state.pokemonData.sprites.front_default} alt="Pokemon API sprite"/>
  				</div>
  			)
  		} else {
@@ -25,4 +36,4 @@ import React from "react";
  			)
  		}
  	}
- }
+}

@@ -49,7 +49,7 @@ class App extends React.Component {
         {/* <Pokemon></Pokemon> */}
         {
           // Array(arraySize).fill(default value).map(() => {return some JSX here})
-          Array(this.state.pokemonCount).fill(null).map(() => <Pokemon />)
+          Array(this.state.pokemonCount).fill(null).map((element, index) => <Pokemon key={index}/>)
         }
 
       </div>
