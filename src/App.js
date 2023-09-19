@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import React from 'react';
 import './App.css';
 import Pokemon from './Pokemon';
@@ -21,17 +20,17 @@ class App extends React.Component {
       pokemonCount: 1
     }
   }
-
+  
   render(){
     return(
       <div>
         <h1>Pokemon page</h1>
 
         <Pokemon></Pokemon>
+
       </div>
     )
   }
-
 }
 
 export default App;
