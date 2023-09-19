@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
-import React from 'react'
+import React from 'react';
 import './App.css';
+import Pokemon from './Pokemon';
 
 // Page that lets us increase or decrease
 // how many Pokemon are on screen 
@@ -18,13 +19,15 @@ class App extends React.Component {
     // start with at least ONE pokemon on screen 
     this.state = {
       pokemonCount: 1
-
     }
   }
+
   render(){
-    return (
+    return(
       <div>
-        <h1> Pokemon Page </h1>
+        <h1>Pokemon page</h1>
+
+        <Pokemon></Pokemon>
       </div>
     )
   }
